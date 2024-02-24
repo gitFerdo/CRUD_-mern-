@@ -41,6 +41,9 @@ function User ()
                                             to="/update"
                                             className='btn btn-primary'
                                         >Update</Link>
+                                        <Link
+                                            className='btn'
+                                        >Delete</Link>
                                     </td>
                                 </tr>
                             } )

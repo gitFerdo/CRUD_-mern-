@@ -10,7 +10,7 @@ app.use( express.json() );
 
 mongoose.connect( "mongodb+srv://crud:crud@atlascluster.mr5bpcu.mongodb.net/crud" )
 
-app.post( "/createUser", ( req, rse ) =>
+app.post( "/createUser", ( req, res ) =>
 {
     UserModel.create( req.body )
         .then( users => res.json( users ) )
