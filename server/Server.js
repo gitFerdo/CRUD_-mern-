@@ -8,7 +8,14 @@ const app = express();
 app.use( cors() );
 app.use( express.json() );
 
-mongoose.connect( "mongodb+srv://crud:crud@atlascluster.mr5bpcu.mongodb.net/crud" )
+mongoose.connect( "/" );
+
+app.get( '/', ( req, res ) =>
+{
+    UserModel.find( {} )
+        .then( users => res.json( users ) )
+        .catch( err => res.json( err ) )
+} )
 
 app.post( "/createUser", ( req, res ) =>
 {
