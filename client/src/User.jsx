@@ -42,9 +42,10 @@ function User ()
 
                                     <td>
                                         <Link
-                                            to="/update"
+                                            to={ `/update/${ user._id }` }
                                             className='btn btn-primary'
                                         >Update</Link>
+
                                         <button className='btn btn-danger'>Delete</button>
                                     </td>
                                 </tr>
